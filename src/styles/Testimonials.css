@@ -1,0 +1,127 @@
+.testimonial-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+.testimonial-heading-container {
+  margin-bottom: 40px;
+}
+
+.testimonials-main-heading {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #0f1123;
+  margin: 0;
+}
+
+.testimonial-subheading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  color: #9c7e57;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+
+.testimonial-slider-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial-slider {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+  width: fit-content;
+}
+
+.testimonial-card {
+  min-width: calc(50% - 10px); 
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.user-avatar {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #1327ac;
+}
+
+.user-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.user-location {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 2px;
+}
+
+.user-review {
+  font-style: italic;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.navigation-arrows {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.arrow-btn {
+  background-color: #152dca;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.arrow-btn:hover {
+  background-color: #0782f5;
+}
+
+.arrow-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    min-width: 100%;
+  }
+
+  .testimonial-slider {
+    gap: 15px;
+  }
+}

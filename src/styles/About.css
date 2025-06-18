@@ -1,0 +1,118 @@
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 5%;
+    background: #f8f8f8;
+    gap: 50px;
+  }
+  
+  .main-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; 
+    color: #1a1a2e;
+    margin-bottom: 30px;
+    position: relative;
+    font-weight: 700;
+  }
+  
+  .about-college-1,
+  .about-college-2,
+  .about-college-3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem; 
+    line-height: 1.9; 
+    color: #333;
+    margin-bottom: 25px;
+  }
+  
+  .main-image {
+    position: relative;
+    flex: 1;
+    min-width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+  
+  .main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  
+  .main-image:hover img {
+    transform: scale(1.03);
+  }
+  
+  .main-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .main-image:hover .main-image-overlay {
+    opacity: 1;
+  }
+  
+  .main-image-overlay img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .main-image-overlay img:hover {
+    transform: scale(1.1);
+  }
+  
+  .about-right-side {
+    flex: 1;
+    min-width: 400px;
+  }
+  
+  .main-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #d4af37, #f9d423);
+  }
+  
+  @media (max-width: 1024px) {
+    .about-container {
+      flex-direction: column;
+    }
+    
+    .main-image,
+    .about-right-side {
+      min-width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 60px 5%;
+    }
+    
+    .main-heading {
+      font-size: 2.5rem;
+    }
+    
+    .about-college-1,
+    .about-college-2,
+    .about-college-3 {
+      font-size: 1.15rem;
+    }
+  }

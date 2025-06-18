@@ -1,0 +1,152 @@
+body{
+  margin: 0%;
+  padding: 0%;
+}
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  background-color: transparent;
+}
+
+.dark-nav {
+  background-color: #2c3e50;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  padding: 1rem 5%;
+}
+
+/* Logo */
+.university-logo {
+  height: 50px;
+  transition: all 0.3s ease;
+}
+
+.dark-nav .university-logo {
+  height: 45px;
+}
+
+/* Navigation Links */
+.navbar-rightside {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-rightside li {
+  list-style: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-rightside li:not(:last-child):after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #4a6bff;
+  transition: all 0.3s ease;
+}
+
+.navbar-rightside li:hover:not(:last-child):after {
+  width: 100%;
+}
+
+.navbar-rightside li:hover {
+  color: #4a6bff;
+}
+
+/* Contact Button */
+.contact-btn {
+  background-color: #4a6bff;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #3a5bef;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(74, 107, 255, 0.3);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .navbar-rightside {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-rightside {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #2c3e50;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    transition: all 0.5s ease;
+  }
+
+  .mobile-open .navbar-rightside {
+    right: 0;
+  }
+
+  .navbar-rightside li {
+    font-size: 1.3rem;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .dark-nav {
+    padding: 1rem 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 1rem 5%;
+  }
+
+  .university-logo {
+    height: 40px;
+  }
+
+  .dark-nav .university-logo {
+    height: 35px;
+  }
+
+  .navbar-rightside {
+    width: 80%;
+  }
+}
