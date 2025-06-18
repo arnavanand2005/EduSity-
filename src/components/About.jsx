@@ -4,10 +4,10 @@ import about from '../assets/about.png';
 import play_icon from '../assets/play-icon.png';
 import '../styles/About.css';
 
-export default function About() {
+export default function About({setPlayState}) {
   const handlePlayClick = () => {
-    alert("Play button clicked");
-  };
+      {setPlayState(true)}
+    };
 
   return (
     <Element name="about">
