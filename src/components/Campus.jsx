@@ -7,9 +7,11 @@ import gallery_5 from '../assets/gallery-5.png';
 import gallery_6 from '../assets/gallery-6.png';
 import white_arrow from '../assets/white-arrow.png'
 import '../styles/Campus.css'
+import { Element } from 'react-scroll';
 
 export default function Campus() {
   return (
+    <Element name='campus'>
     <div className='campus-container'>
         <div className="heading-container">
             <h4 className='main-campus-subheading'>GALLERY</h4>
@@ -28,7 +30,7 @@ export default function Campus() {
             <button>See more <img src={white_arrow} alt="" /></button>
             </div>
         </div>
-
     </div>
+    </Element>
   )
 }

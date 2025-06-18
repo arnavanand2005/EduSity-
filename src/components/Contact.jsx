@@ -4,6 +4,7 @@ import mail_icon from '../assets/mail-icon.png';
 import phone_icon from '../assets/phone-icon.png';
 import location_icon from '../assets/location-icon.png';
 import arrow_icon from '../assets/white-arrow.png';
+import { Element } from 'react-scroll';
 
 export default function Contact() {
     const [result, setResult] = React.useState("");
@@ -31,6 +32,7 @@ export default function Contact() {
     };
     
     return (
+        <Element name='contact'>
         <div className='contact-container'>
             <div className="contact-header">
                 <h1><span className="contact-highlight">CONNECT</span> WITH US</h1>
@@ -90,5 +92,6 @@ export default function Contact() {
                 </div>
             </div>
         </div>
+        </Element>
     )
 }

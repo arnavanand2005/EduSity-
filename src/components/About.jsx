@@ -1,7 +1,8 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 import about from '../assets/about.png';
 import play_icon from '../assets/play-icon.png';
-import '../styles/About.css'
+import '../styles/About.css';
 
 export default function About() {
   const handlePlayClick = () => {
@@ -9,7 +10,8 @@ export default function About() {
   };
 
   return (
-    <div className='about-container'>
+    <Element name="about">
+      <div className='about-container'>
       <div className='main-image'>
         <img src={about} alt="about-image"/>
         <div className='main-image-overlay'>
@@ -35,6 +37,7 @@ export default function About() {
           </p>
         </div>
       </div>
-    </div>
+      </div>
+    </Element>
   );
 }

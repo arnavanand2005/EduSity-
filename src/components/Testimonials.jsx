@@ -6,6 +6,7 @@ import user_4 from '../assets/user-4.png';
 import back_icon from '../assets/back-icon.png';
 import next_icon from '../assets/next-icon.png';
 import '../styles/Testimonials.css';
+import { Element } from 'react-scroll';
 
 export default function Testimonials() {
         const slider = useRef(); 
@@ -23,7 +24,7 @@ export default function Testimonials() {
     
         function backwardslide() {
             if (tx.current < 0) {
-                tx.current += 100 / slidesToShow; // Move back by 50%
+                tx.current += 100 / slidesToShow;
                 slider.current.style.transform = `translateX(${tx.current}%)`;
             }
         }
@@ -60,6 +61,7 @@ export default function Testimonials() {
     ];
 
     return (
+        <Element name='testimonials'>
         <div className="testimonial-container">
             <div className="testimonial-heading-container">
                 <h1 className='testimonials-main-heading'>TESTIMONIALS</h1>
@@ -90,5 +92,6 @@ export default function Testimonials() {
                 <button onClick={forwardslide} className='arrow-btn'><img src={next_icon} alt="Next" /></button>
             </div>
         </div>
+        </Element>
     );
 }

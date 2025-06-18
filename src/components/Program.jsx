@@ -6,9 +6,11 @@ import program_1_icon from '../assets/program-icon-1.png';
 import program_2_icon from '../assets/program-icon-2.png';
 import program_3_icon from '../assets/program-icon-3.png';
 import '../styles/Program.css';
+import { Element } from 'react-scroll';
 
 export default function About() {
   return (
+    <Element name='program'>
     <div className='about-container'>
       <div className="program-heading">
         <p>Our Program</p>
@@ -47,5 +49,6 @@ export default function About() {
         </div>
       </div>
     </div>
+  </Element>
   );
 }

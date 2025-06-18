@@ -1,7 +1,8 @@
-body{
-  margin: 0%;
-  padding: 0%;
+body {
+  margin: 0;
+  padding: 0;
 }
+
 .navbar-container {
   width: 100%;
   display: flex;
@@ -22,34 +23,51 @@ body{
   padding: 1rem 5%;
 }
 
-/* Logo */
 .university-logo {
   height: 50px;
   transition: all 0.3s ease;
+  z-index: 1001;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.university-logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
 }
 
 .dark-nav .university-logo {
   height: 45px;
 }
 
-/* Navigation Links */
-.navbar-rightside {
+.navbar-rightside ul {
   display: flex;
   align-items: center;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .navbar-rightside li {
-  list-style: none;
+  position: relative;
+}
+
+.navbar-rightside a {
   color: white;
+  text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
   cursor: pointer;
-  position: relative;
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
-.navbar-rightside li:not(:last-child):after {
+.navbar-rightside a:hover {
+  color: #4a6bff;
+}
+
+.navbar-rightside li:not(:last-child) a::after {
   content: '';
   position: absolute;
   width: 0;
@@ -60,16 +78,11 @@ body{
   transition: all 0.3s ease;
 }
 
-.navbar-rightside li:hover:not(:last-child):after {
+.navbar-rightside li:not(:last-child) a:hover::after {
   width: 100%;
 }
 
-.navbar-rightside li:hover {
-  color: #4a6bff;
-}
-
-/* Contact Button */
-.contact-btn {
+.navbar-rightside button {
   background-color: #4a6bff;
   color: white;
   border: none;
@@ -81,72 +94,113 @@ body{
   transition: all 0.3s ease;
 }
 
-.contact-btn:hover {
+.navbar-rightside button:hover {
   background-color: #3a5bef;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(74, 107, 255, 0.3);
 }
 
-/* Mobile Menu Button */
 .mobile-menu-btn {
   display: none;
+  background: none;
+  border: none;
   color: white;
   cursor: pointer;
   z-index: 1001;
+  font-size: 1.8rem;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background-color: #2c3e50;
+  z-index: 1000;
+  transition: right 0.3s ease-in-out;
+  padding-top: 80px;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  margin: 0;
+}
+
+.mobile-menu li {
+  list-style: none;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  color: #4a6bff;
+}
+
+.mobile-menu button {
+  background-color: #4a6bff;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.mobile-menu button:hover {
+  background-color: #3a5bef;
 }
 
 /* Responsive Design */
 @media (max-width: 992px) {
-  .navbar-rightside {
+  .navbar-rightside ul {
     gap: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .navbar-rightside {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100vh;
-    background-color: #2c3e50;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2.5rem;
-    transition: all 0.5s ease;
+  .navbar-container {
+    padding: 1rem 5%;
   }
 
-  .mobile-open .navbar-rightside {
-    right: 0;
-  }
-
-  .navbar-rightside li {
-    font-size: 1.3rem;
+  .navbar-rightside ul {
+    display: none;
   }
 
   .mobile-menu-btn {
     display: block;
   }
 
-  .dark-nav {
-    padding: 1rem 5%;
+  .university-logo {
+    height: 40px;
   }
 }
 
 @media (max-width: 480px) {
-  .navbar-container {
-    padding: 1rem 5%;
+  .mobile-menu {
+    width: 80%;
   }
 
   .university-logo {
-    height: 40px;
+    height: 35px;
   }
 
   .dark-nav .university-logo {
     height: 35px;
-  }
-
-  .navbar-rightside {
-    width: 80%;
   }
 }
