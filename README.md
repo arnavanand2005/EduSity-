@@ -93,14 +93,15 @@ Here are some screenshots of the Edusity platform:
 
 **Home Page:**
 The landing page welcoming users to the Edusity platform.
-![Home Page](image_158e05.jpg)
+<img width="1450" alt="image" src="https://github.com/user-attachments/assets/0342bbe5-6577-4835-b4fe-1d5caafe5ad8" />
 
 **About Us Page:**
 Details about the Edusity platform's mission and approach.
-![About Us Page](image_158ae7.jpg)
+<img width="1406" alt="image" src="https://github.com/user-attachments/assets/e0024337-f0d7-44a1-b0d0-fd24365ec470" />
+
 
 **Contact Us Page:**
 Form and contact information to connect with Edusity.
-![Contact Us Page](image_158dac.jpg)
+<img width="1371" alt="image" src="https://github.com/user-attachments/assets/bfa26292-d4d9-4239-9c30-d4c11cb38120" />
 
 ---
