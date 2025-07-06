@@ -37,25 +37,8 @@ Edusity is a modern, responsive, and fully functional frontend project designed 
 
 The project follows a standard React application structure (or similar, depending on your build):
 
-edusity-project/
-├── public/
-├── src/
-│   ├── components/  (e.g., Navbar, Footer, etc.)
-│   ├── pages/
-│   │   ├── About.jsx
-│   │   ├── Campus.jsx
-│   │   ├── Contact.jsx
-│   │   ├── Home.jsx
-│   │   ├── Program.jsx
-│   │   ├── Testimonials.jsx
-│   │   ├── Videoplayer.jsx (Added based on your file list)
-│   ├── App.jsx
-│   ├── index.jsx
-│   └── styles/ (or individual component CSS files)
-├── .gitignore
-├── package.json
-├── README.md
-└── ...
+<img width="540" alt="image" src="https://github.com/user-attachments/assets/6ff3831b-f7c1-47fc-ab0b-d6c446461590" />
+
 
 
 ## Setup and Installation
